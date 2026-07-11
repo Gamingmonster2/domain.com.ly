@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether & Pearl — Premium Curated Domain Portfolio</title>
+    <meta name="description" content="Acquire institutional-grade digital real estate. A highly curated portfolio of premium domain names optimized for immediate global scale.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        pearl: {
+                            50: '#FAFAFB',
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            900: '#111827',
+                        },
+                        slate: {
+                            950: '#0B0F19',
+                        }
+                    },
+                    animation: {
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'float-medium': 'float 5s ease-in-out infinite',
+                        'pulse-subtle': 'pulseSubtle 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(1.5deg)' },
+                        },
+                        pulseSubtle: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.6', transform: 'scale(1.05)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* Custom Iridescent and Glassmorphism Styles */
+        .pearl-gradient-bg {
+            background: radial-gradient(circle at 0% 0%, rgba(243, 244, 246, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+        .holographic-glow-1 {
+            background: radial-gradient(circle, rgba(219,234,254,0.4) 0%, rgba(243,232,255,0.3) 50%, rgba(255,255,255,0) 100%);
+        }
+        .holographic-glow-2 {
+            background: radial-gradient(circle, rgba(209,250,229,0.3) 0%, rgba(219,234,254,0.3) 50%, rgba(255,255,255,0) 100%);
+        }
+        .pearl-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .pearl-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.08), 
+                        0 0 40px 10px rgba(219, 234, 254, 0.3);
+            border-color: rgba(219, 234, 254, 0.8);
+        }
+        .isometric-container {
+            perspective: 1200px;
+        }
+        .isometric-device {
+            transform: rotateX(30deg) rotateY(-20deg) rotateZ(10deg);
+            box-shadow: -20px 30px 60px rgba(15, 23, 42, 0.12);
+        }
+        .text-gradient-pearl {
+            background: linear-gradient(135deg, #0F172A 30%, #475569 70%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-pearl-50 text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Header System -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-slate-100/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 group" aria-label="Aether & Pearl Home">
+                <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-slate-900 to-slate-700 flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0.5 rounded-full bg-white flex items-center justify-center">
+                        <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-blue-400 via-indigo-300 to-purple-400 animate-pulse-subtle"></div>
+                    </div>
+                </div>
+                <span class="font-display font-bold text-lg tracking-tight text-slate-900 group-hover:text-slate-700 transition-colors">Aether<span class="text-slate-400 font-light font-sans"> & </span>Pearl</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#portfolio" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Portfolio Matrix</a>
+                <a href="#why-premium" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">The Premium Value</a>
+                <a href="#acquisition" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Acquisition Flow</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#portfolio" class="inline-flex items-center justify-center px-4.5 py-2 text-xs font-semibold tracking-wider uppercase text-slate-900 bg-white border border-slate-200 rounded-full hover:bg-slate-50 transition-all shadow-sm">
+                    Browse Assets
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Landmark -->
+    <main id="main-content" class="relative pt-20">
+        
+        <!-- Background Holographic Elements -->
+        <div class="absolute top-0 left-1/4 w-[600px] h-[600px] holographic-glow-1 rounded-full -translate-y-1/3 -translate-x-1/2 pointer-events-none z-0"></div>
+        <div class="absolute top-1/3 right-0 w-[500px] h-[500px] holographic-glow-2 rounded-full translate-x-1/4 pointer-events-none z-0 animate-pulse-subtle"></div>
+
+        <!-- Component 1: Hero Section -->
+        <section class="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32 text-center">
+            <!-- Symmetrical Floating Assets (Visual Anchor) -->
+            <div class="absolute left-10 top-1/4 hidden lg:block animate-float-slow pointer-events-none">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-40">
+                    <defs>
+                        <linearGradient id="sphereGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#E0E7FF" />
+                            <stop offset="50%" stop-color="#F3E8FF" />
+                            <stop offset="100%" stop-color="#FCE7F3" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="40" cy="40" r="32" fill="url(#sphereGrad1)" />
+                    <circle cx="40" cy="40" r="31.5" stroke="#FFFFFF" stroke-opacity="0.6" />
+                </svg>
+            </div>
+            <div class="absolute right-12 top-1/3 hidden lg:block animate-float-medium pointer-events-none">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-50">
+                    <defs>
+                        <linearGradient id="sphereGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#D1FAE5" />
+                            <stop offset="50%" stop-color="#DBEAFE" />
+                            <stop offset="100%" stop-color="#EEF2F6" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="10" width="40" height="40" rx="12" fill="url(#sphereGrad2)" />
+                    <rect x="10.5" y="10.5" width="39" height="39" rx="11.5" stroke="#FFFFFF" stroke-opacity="0.8" />
+                </svg>
+            </div>
+
+            <!-- Hero Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-slate-200/60 shadow-sm backdrop-blur-md mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-700">Premium Domain Portfolio</span>
+            </div>
+
+            <!-- Commanding Headline -->
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-slate-900 max-w-4xl mx-auto leading-[1.1] mb-8">
+                The Digital Pearl <br>
+                <span class="text-gradient-pearl">Super-App Identity</span>
+            </h1>
+
+            <!-- Subtext -->
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed mb-12">
+                Acquire ultra-premium, high-authority domain assets designed for instant trust, global authority, and seamless brand execution.
+            </p>
+
+            <!-- Dual Pill-Shaped Action Triggers -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#portfolio" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide text-white bg-slate-950 rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:translate-y-[-1px]">
+                    Explore Available Assets
+                </a>
+                <a href="#why-premium" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide text-slate-700 bg-white border border-slate-200 rounded-full hover:bg-slate-50 transition-all shadow-sm">
+                    Why Premium Identity?
+                </a>
+            </div>
+        </section>
+
+        <!-- Component 2: Overlapping Isometric Mockup Section -->
+        <section class="relative z-10 max-w-7xl mx-auto px-6 py-12 overflow-hidden">
+            <div class="bg-gradient-to-b from-slate-100/40 to-slate-200/20 border border-slate-200/50 rounded-3xl p-8 md:p-16 lg:p-24 relative overflow-hidden">
+                <!-- Abstract Geometric Pastel Backdrops -->
+                <div class="absolute -right-20 -bottom-20 w-[400px] h-[400px] rounded-full bg-blue-100/50 blur-3xl pointer-events-none"></div>
+                <div class="absolute left-1/3 top-1/4 w-[300px] h-[300px] rounded-full bg-purple-100/40 blur-3xl pointer-events-none"></div>
+
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-blue-600">
+                            <span>Dynamic Presence</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-display font-extrabold tracking-tight text-slate-900 leading-tight">
+                            Command authority across every platform.
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            A premium domain doesn't just anchor your website; it defines your email deliverability, your advertising click-through rates, and your venture's valuation from day one.
+                        </p>
+                        <div class="pt-4 flex flex-wrap gap-6 text-sm text-slate-500">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Instant Authority</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Global Tradability</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Isometric Device Mockup Showcase -->
+                    <div class="lg:col-span-7 flex justify-center items-center py-12 lg:py-0">
+                        <div class="isometric-container relative w-full max-w-[480px] h-[360px] flex items-center justify-center">
+                            <!-- Background Perfect Circle Anchor -->
+                            <div class="absolute w-72 h-72 rounded-full bg-gradient-to-tr from-indigo-100/50 via-slate-100 to-emerald-100/30 -z-10 animate-pulse-subtle"></div>
+                            
+                            <!-- Phone Mockup 1 (Underneath) -->
+                            <div class="isometric-device absolute w-52 h-80 rounded-[32px] bg-white border border-slate-200/80 p-3 flex flex-col justify-between -translate-x-12 -translate-y-8 z-10">
+                                <div class="w-full h-4 bg-slate-100 rounded-full mb-4 flex items-center px-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
+                                </div>
+                                <div class="flex-grow flex flex-col justify-center items-center text-center p-4">
+                                    <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">AVAILABLE</span>
+                                    <span class="font-display font-bold text-2xl text-slate-800">algo.ly</span>
+                                    <div class="w-12 h-1 bg-blue-500 rounded-full mt-3"></div>
+                                </div>
+                                <div class="w-full h-8 bg-slate-950 rounded-2xl flex items-center justify-center text-[10px] font-bold text-white uppercase tracking-wider">
+                                    Secure Asset
+                                </div>
+                            </div>
+
+                            <!-- Phone Mockup 2 (Overlapping/Top) -->
+                            <div class="isometric-device absolute w-52 h-80 rounded-[32px] bg-white border border-slate-200/80 p-3 flex flex-col justify-between translate-x-12 translate-y-8 z-20 shadow-2xl">
+                                <div class="w-full h-4 bg-slate-100 rounded-full mb-4 flex items-center justify-between px-3">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
+                                    <div class="w-8 h-1 bg-slate-200 rounded-full"></div>
+                                </div>
+                                <div class="flex-grow flex flex-col justify-center items-center text-center p-4">
+                                    <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">FEATURED</span>
+                                    <span class="font-display font-bold text-2xl text-slate-900">huge.ly</span>
+                                    <div class="w-12 h-1 bg-purple-500 rounded-full mt-3"></div>
+                                </div>
+                                <div class="w-full h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center text-[10px] font-bold text-white uppercase tracking-wider">
+                                    Acquire Now
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Component 4: Premium Asset Matrix (Market Grid) -->
+        <section id="portfolio" class="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
+            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-slate-900 mb-6">
+                    The Premium Asset Matrix
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Explore our strictly curated ecosystem of category-defining digital assets. No pricing is listed to preserve competitive value; click any asset to view direct Escrow/BrandBucket acquisition paths.
+                </p>
+                
+                <!-- Client-Side Search & Filter System -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <div class="relative flex-grow">
+                        <input type="text" id="domainSearch" placeholder="Search premium domains..." class="w-full px-5 py-3 rounded-full bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all text-sm placeholder:text-slate-400">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic 4-Column Card Grid -->
+            <div id="domainGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Dynamic Injection Target -->
+            </div>
+        </section>
+
+        <!-- Component 3: Alternating Feature Rows -->
+        <section id="why-premium" class="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32 border-t border-slate-200/60">
+            <!-- Row A: Right Typography, Left Minimalist Wireframe -->
+            <div class="grid lg:grid-cols-12 gap-16 items-center mb-24 md:mb-32">
+                <div class="lg:col-span-6 order-2 lg:order-1">
+                    <div class="relative p-8 bg-white border border-slate-200/60 rounded-3xl shadow-sm overflow-hidden flex items-center justify-center min-h-[320px]">
+                        <!-- High-tech radial background vector lines -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-45">
+                            <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="200" cy="200" r="180" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4 4" />
+                                <circle cx="200" cy="200" r="140" stroke="#CBD5E1" stroke-width="1" />
+                                <circle cx="200" cy="200" r="100" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="8 8" />
+                                <circle cx="200" cy="200" r="60" stroke="#94A3B8" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="relative text-center">
+                            <div class="w-16 h-16 mx-auto rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-center mb-4 shadow-sm">
+                                <svg class="w-8 h-8 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest text-slate-400 font-bold">Secure Escrow Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-purple-600">
+                        <span>Institutional Assurance</span>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-display font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Secured &amp; Transferred with Complete Trust
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Every single transaction is managed via BrandBucket's industry-standard secure escrow framework. Rest assured that ownership is fully guaranteed and routed with complete speed, confidentiality, and technical support.
+                    </p>
+                    <ul class="space-y-3 pt-2 text-slate-600">
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 text-xs font-bold">✓</span>
+                            <span>Immediate DNS configuration control</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 text-xs font-bold">✓</span>
+                            <span>Dedicated escrow support team</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row B: Left Typography, Right Animated SVG Financial Chart -->
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-600">
+                        <span>Growth Multiplier</span>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-display font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Achieve Compounded Organic Growth
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Why pay endlessly for paid ads when you can own the category? A premium domain is a generational asset that continually generates natural authority, improves search engine indexing, and lowers customer acquisition costs (CAC).
+                    </p>
+                    <div class="p-6 bg-slate-100/40 border border-slate-200/40 rounded-2xl">
+                        <p class="text-sm italic text-slate-500">
+                            "A category-defining domain represents the single most cost-effective branding decision an enterprise can make."
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="p-8 bg-white border border-slate-200/60 rounded-3xl shadow-sm relative overflow-hidden flex items-center justify-center min-h-[320px]">
+                        <!-- Circular Cropped Interface Preview / SVG Chart -->
+                        <div class="w-full max-w-sm space-y-6">
+                            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                                <div>
+                                    <span class="text-xs text-slate-400 font-semibold uppercase">Organic Valuation Metric</span>
+                                    <h4 class="text-lg font-bold text-slate-900">Brand Authority Projection</h4>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">+284%</span>
+                            </div>
+                            <!-- SVG Sparkline Trend Vector -->
+                            <svg viewBox="0 0 300 100" class="w-full h-24 overflow-visible">
+                                <defs>
+                                    <linearGradient id="chartGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                                        <stop offset="0%" stop-color="#3B82F6" stop-opacity="0" />
+                                        <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.15" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 0 80 Q 50 60, 100 70 T 200 30 T 300 10 L 300 100 L 0 100 Z" fill="url(#chartGrad)" />
+                                <path d="M 0 80 Q 50 60, 100 70 T 200 30 T 300 10" fill="none" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" />
+                                <circle cx="300" cy="10" r="5" fill="#3B82F6" />
+                            </svg>
+                            <div class="flex justify-between text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+                                <span>Phase 1: Setup</span>
+                                <span>Phase 2: Acquisition</span>
+                                <span>Phase 3: Market Dominance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Component 5: 3D Product Showcase Divider -->
+        <section class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+            <div class="relative bg-slate-950 rounded-3xl overflow-hidden p-8 md:p-16 text-center shadow-2xl">
+                <!-- Iridescent Metallic/Reflective Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 via-purple-900/30 to-emerald-900/20 pointer-events-none"></div>
+                <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+                    <div class="inline-flex items-center gap-1 bg-white/10 border border-white/10 rounded-full px-3 py-1.5">
+                        <span class="text-xs text-indigo-200 font-bold uppercase tracking-widest">Master Class Digital Assets</span>
+                    </div>
+                    <h3 class="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-white leading-tight">
+                        Uncompromised Security. Pristine Legacy.
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed max-w-lg mx-auto text-sm md:text-base">
+                        Every domain listed in our portfolio is a singular, elite digital asset. Secure it today before it is permanently integrated into an enterprise structure.
+                    </p>
+                    <div class="pt-6">
+                        <div class="inline-flex items-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/10">
+                            <span class="px-4 py-2 text-xs font-semibold text-white uppercase tracking-wider">100% Secure Transfer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Component 6: Conversional Call-To-Action (CTA) -->
+        <section id="acquisition" class="relative z-10 max-w-4xl mx-auto px-6 py-24 md:py-32 text-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl md:text-4xl font-display font-extrabold tracking-tight text-slate-900">
+                    Stay Updated on New Acquisitions
+                </h2>
+                <p class="text-slate-600 max-w-lg mx-auto leading-relaxed">
+                    Join our ultra-private list of tier-one digital investors and receive immediate notification the instant high-value assets drop.
+                </p>
+                
+                <!-- Email Input Container -->
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will notify you of new drops.');" class="max-w-md mx-auto pt-6">
+                    <div class="flex flex-col sm:flex-row items-center gap-2 p-1.5 rounded-2xl sm:rounded-full bg-white border border-slate-200 shadow-sm focus-within:ring-2 focus-within:ring-blue-400/50 transition-all">
+                        <input type="email" required placeholder="Enter your business email" class="w-full px-4 py-3 sm:py-2.5 rounded-full bg-transparent focus:outline-none text-sm text-slate-800 placeholder:text-slate-400" aria-label="Business Email Address">
+                        <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 sm:py-2.5 text-sm font-semibold text-white bg-slate-950 rounded-full hover:bg-slate-800 transition-all whitespace-nowrap">
+                            Join Private List
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Component 7: Deep Corporate Footer -->
+    <footer class="bg-slate-950 text-slate-300 border-t border-slate-900 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div class="lg:col-span-4 space-y-6">
+                    <a href="#" class="flex items-center gap-2.5 group" aria-label="Aether & Pearl Home">
+                        <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-white to-slate-300 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0.5 rounded-full bg-slate-950 flex items-center justify-center">
+                                <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-blue-400 via-indigo-300 to-purple-400"></div>
+                            </div>
+                        </div>
+                        <span class="font-display font-bold text-lg tracking-tight text-white">Aether<span class="text-slate-500 font-light font-sans"> & </span>Pearl</span>
+                    </a>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Aether &amp; Pearl is a leading, boutique namespace acquisition agency. We curate and deliver pristine digital infrastructure assets to category leaders globally.
+                    </p>
+                </div>
+
+                <!-- Link Columns (Logical & SEO Navigable) -->
+                <div class="lg:col-span-2 lg:col-start-6 space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">The Portfolio</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Premium Grid</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Featured Domains</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Escrow Assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">The Value</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#why-premium" class="hover:text-white transition-colors">Why Premium?</a></li>
+                        <li><a href="#why-premium" class="hover:text-white transition-colors">Escrow Flow</a></li>
+                        <li><a href="#why-premium" class="hover:text-white transition-colors">Valuation Metrics</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Legal &amp; Compliance</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        All transactions are subject to the escrow safety protocols of BrandBucket. Trade names, logos, and brands are property of their respective owners.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar (WCAG & Accessibility Safe) -->
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>&copy; <span id="currentYear"></span> Aether &amp; Pearl. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Privacy Policy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Terms of Service">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Architecture & Dataset Integration -->
+    <script>
+        // Core Portfolio Dataset
+        const domains = [
+            { name: 'huge.ly', url: 'https://www.brandbucket.com/names/huge.ly', desc: 'The ultimate power-brand for scale, impact, and unforgettable market presence.', category: 'Premium L.Y' },
+            { name: 'algo.ly', url: 'https://www.brandbucket.com/names/algo.ly', desc: 'Precision-engineered brand identity for algorithmic intelligence, fintech, or SaaS.', category: 'AI & Tech' },
+            { name: 'purple.ly', url: 'https://www.brandbucket.com/names/purple.ly', desc: 'A vibrant, creative, and highly memorable brand name radiating luxury and innovation.', category: 'Creative' },
+            { name: 'virus.ly', url: 'https://www.brandbucket.com/names/virus.ly', desc: 'High-energy, high-impact digital identity designed for viral growth and social tech.', category: 'Growth' },
+            { name: 'eden.ly', url: 'https://www.brandbucket.com/names/eden.ly', desc: 'A pristine, organic, and peaceful digital sanctuary for wellness, lifestyle, or green tech.', category: 'Lifestyle' },
+            { name: 'unit.ly', url: 'https://www.brandbucket.com/names/unit.ly', desc: 'A clean, cohesive, and modular name perfect for systems, logistics, or collaboration tools.', category: 'SaaS' },
+            { name: 'able.ly', url: 'https://www.brandbucket.com/names/able.ly', desc: 'Empowering, accessible, and highly functional naming option for fintech or productivity.', category: 'Fintech' },
+            { name: 'well.ly', url: 'https://www.brandbucket.com/names/well.ly', desc: 'A premium health, wellness, and longevity brand name with universal appeal.', category: 'Health' },
+            { name: 'rosegrows.com', url: 'https://www.brandbucket.com/names/rosegrows.com', desc: 'An elegant, growth-oriented brand identity blending natural beauty with scalable success.', category: 'E-Commerce' },
+            { name: 'marketcombo.com', url: 'https://www.brandbucket.com/names/marketcombo.com', desc: 'The perfect synergy of marketplace intelligence, retail innovation, and unified commerce.', category: 'Marketplace' }
+        ];
+
+        // Dynamic Card Rendering Function
+        function renderGrid(filteredDomains) {
+            const gridContainer = document.getElementById('domainGrid');
+            gridContainer.innerHTML = '';
+
+            if (filteredDomains.length === 0) {
+                gridContainer.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-500">
+                        No premium assets match your search criteria.
+                    </div>
+                `;
+                return;
+            }
+
+            filteredDomains.forEach(domain => {
+                // Determine a unique subtle gradient accent for each card's icon container
+                const isDotCom = domain.name.endsWith('.com');
+                const accentColor = isDotCom ? 'from-emerald-400 to-teal-500' : 'from-blue-400 to-indigo-500';
+
+                const cardHTML = `
+                    <article class="pearl-card border border-slate-200/60 rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div>
+                            <!-- Card Header: Category & Asset Indicator -->
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider">
+                                    ${domain.category}
+                                </span>
+                                <span class="flex h-2 w-2 relative">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                </span>
+                            </div>
+
+                            <!-- Crisp Dark Typography for Domain -->
+                            <h3 class="font-display font-extrabold text-2xl text-slate-900 tracking-tight mb-3">
+                                ${domain.name}
+                            </h3>
+
+                            <p class="text-xs text-slate-500 leading-relaxed mb-6">
+                                ${domain.desc}
+                            </p>
+                        </div>
+
+                        <div>
+                            <!-- Ultra-thin Sparkline Vector Graphic -->
+                            <div class="w-full h-8 mb-6 opacity-30">
+                                <svg viewBox="0 0 100 30" class="w-full h-full overflow-visible">
+                                    <path d="M 0 20 Q 25 10, 50 18 T 100 5" fill="none" stroke="currentColor" stroke-width="1.5" class="text-slate-400" />
+                                </svg>
+                            </div>
+
+                            <!-- Elegant Call-To-Action Button pointing to BrandBucket -->
+                            <a href="${domain.url}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-between px-4 py-3 bg-slate-50 border border-slate-200/80 rounded-2xl text-xs font-bold text-slate-800 hover:bg-slate-950 hover:text-white hover:border-slate-950 transition-all group" aria-label="Make an Enquiry for ${domain.name}">
+                                <span>Make an Enquiry</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                `;
+                gridContainer.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // Search Filter Logic
+        document.getElementById('domainSearch').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const filtered = domains.filter(domain => 
+                domain.name.toLowerCase().includes(query) || 
+                domain.category.toLowerCase().includes(query) ||
+                domain.desc.toLowerCase().includes(query)
+            );
+            renderGrid(filtered);
+        });
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGrid(domains);
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
